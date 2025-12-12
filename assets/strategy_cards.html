@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategy Cards Prototype</title>
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #111;
+            /* Dark background for context */
+            padding: 40px;
+            color: white;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .strategy-card {
+            background-color: #1F2F23;
+            /* Dark green card background */
+            border: 1px solid #2E4532;
+            border-radius: 12px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: #3D5C42;
+        }
+
+        .card-icon {
+            font-size: 24px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin: 0 0 12px 0;
+            color: #FFFFFF;
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #B0C4B4;
+            /* Light sage green for text */
+            margin: 0;
+        }
+
+        /* Specific Icon Colors to match the feel */
+        .icon-story {
+            color: #FFD700;
+        }
+
+        /* Gold */
+        .icon-sustain {
+            color: #4CAF50;
+        }
+
+        /* Green */
+        .icon-innovate {
+            color: #64B5F6;
+        }
+
+        /* Blue */
+        .icon-integrity {
+            color: #FF7043;
+        }
+
+        /* Orange/Warm */
+    </style>
+</head>
+
+<body>
+
+    <div class="section-header">
+        <h2>Our Strategic Pillars</h2>
+    </div>
+
+    <div class="strategy-grid">
+        <!-- Our Story -->
+        <div class="strategy-card">
+            <div class="card-icon icon-story">📖</div>
+            <h3 class="card-title">Our Story</h3>
+            <p class="card-description">
+                Founded on a commitment to excellence, we have grown from a small consultancy to a leader in sustainable
+                MEP solutions, driving change across the industry.
+            </p>
+        </div>
+
+        <!-- Sustainability -->
+        <div class="strategy-card">
+            <div class="card-icon icon-sustain">🌱</div>
+            <h3 class="card-title">Sustainability</h3>
+            <p class="card-description">
+                We prioritize eco-friendly designs, energy efficiency, and renewable integration to reduce carbon
+                footprints and create a greener future for all.
+            </p>
+        </div>
+
+        <!-- Innovation -->
+        <div class="strategy-card">
+            <div class="card-icon icon-innovate">💡</div>
+            <h3 class="card-title">Innovation</h3>
+            <p class="card-description">
+                Leveraging cutting-edge technology and smart systems, we deliver forward-thinking engineering solutions
+                that optimize performance and adaptability.
+            </p>
+        </div>
+
+        <!-- Integrity -->
+        <div class="strategy-card">
+            <div class="card-icon icon-integrity">🛡️</div>
+            <h3 class="card-title">Integrity</h3>
+            <p class="card-description">
+                We operate with transparency, honesty, and accountability, ensuring that every project meets the highest
+                standards of safety and ethical practice.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>
