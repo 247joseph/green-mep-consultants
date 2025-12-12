@@ -475,3 +475,90 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+.story-box {
+    background-color: var(--bg-secondary);
+    padding: 60px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.story-box:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.story-box h2 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+}
+
+.story-box p {
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.value-card {
+    background-color: var(--bg-secondary);
+    padding: 40px 30px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+}
+
+.value-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+@media (max-width: 992px) {
+    .values-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+/* Hero Slogan Enhancement */
+.about-hero .hero-subtitle {
+    font-size: 1.35rem;
+    font-weight: 300;
+    color: var(--text-primary);
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    max-width: 700px;
+    margin: 50px auto 0;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* About Section Spacing */
+.about-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
