@@ -270,20 +270,79 @@ nav {
     border-top: 1px solid var(--border-color);
 }
 
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 50px;
+/* Team Slider */
+.slider-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 50px auto 0;
+    gap: 15px;
+}
+
+.team-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 20px 5px;
+    width: 100%;
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.team-slider::-webkit-scrollbar {
+    display: none;
+    /* Chrome/Safari */
+}
+
+.slider-btn {
+    background: transparent;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    cursor: pointer;
+    padding: 0 10px;
+    transition: transform 0.2s, color 0.3s;
+    user-select: none;
+    display: block;
+    /* Ensure visible */
+    z-index: 10;
+}
+
+.slider-btn:hover {
+    transform: scale(1.2);
+    color: var(--accent-hover);
 }
 
 .team-card {
+    min-width: unset;
+    /* Remove fixed width */
+    width: calc(50% - 15px);
+    /* 2 cards per view (gap is 30px, so minus half gap) */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    /* Align to start for clean 2-column view */
     text-align: center;
     padding: 30px 15px;
     background-color: #ffffff;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .team-card {
+        width: 100%;
+        /* 1 card per view on mobile */
+        scroll-snap-align: center;
+    }
+
+    .slider-btn {
+        display: none;
+        /* Hide buttons on mobile, rely on swipe */
+    }
 }
 
 .team-card:hover {
