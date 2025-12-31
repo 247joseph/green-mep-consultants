@@ -1,23 +1,26 @@
 /* Global Reset & Base Styles */
 :root {
-    /* Color Palette - Olive & Desert Blend */
-    --bg-primary: #1a2e1a;
-    /* Dark Olive - Background */
-    --bg-secondary: #243b24;
-    /* Slightly lighter olive for cards/sections */
-    --text-primary: #EDEADE;
-    /* Desert Sand - Main Text */
-    --text-secondary: #D2B48C;
-    /* Tan/Beige - Subtitles/Accents */
-    --accent-color: #C2B280;
-    /* Sand/Gold - Buttons/Highlights */
-    --accent-hover: #E6D9AC;
-    /* Lighter Gold for hover states */
-    --border-color: #3d523d;
-    /* Subtle green border */
+    /* Color Palette - Desert & Olive Theme */
+    --bg-primary: #ffffff;
+    /* White Background */
+    --bg-secondary: linear-gradient(135deg, #E6D2B5 0%, #AEC298 100%);
+    /* Desert-Olive Gradient */
+    --text-primary: #000000;
+    /* Black - Main Text */
+    --text-secondary: #333333;
+    /* Dark Gray - Subtitles/Accents */
+    --accent-color: #556B2F;
+    /* Dark Olive Green - Buttons/Highlights */
+    --accent-hover: #6B8E23;
+    /* Olive Drab for hover states */
+    --border-color: #e0e0e0;
+    /* Light border */
 
     /* Typography */
-    --font-main: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-main: 'Inter',
+        system-ui,
+        -apple-system,
+        sans-serif;
 
     /* Spacing */
     --container-width: 1200px;
@@ -76,7 +79,7 @@ ul {
 
 .btn-primary {
     background-color: var(--accent-color);
-    color: black !important;
+    color: white !important;
 }
 
 .btn-primary:hover {
@@ -92,7 +95,7 @@ ul {
 }
 
 .btn-outline:hover {
-    background-color: rgba(194, 178, 128, 0.1);
+    background-color: rgba(107, 142, 35, 0.1);
     color: var(--accent-color);
 }
 
@@ -103,9 +106,10 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-    background-color: rgba(26, 46, 26, 0.95);
+    background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }
 
 nav {
@@ -175,7 +179,7 @@ nav {
     text-align: center;
     padding-top: 80px;
     /* Offset for fixed header */
-    background: radial-gradient(circle at center, #243b24 0%, var(--bg-primary) 70%);
+    background: var(--bg-primary);
 }
 
 .hero-content {
@@ -231,7 +235,7 @@ nav {
 }
 
 .service-card {
-    background-color: var(--bg-secondary);
+    background: var(--bg-secondary);
     padding: 40px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
@@ -262,7 +266,7 @@ nav {
 /* Team Section */
 .team {
     padding: 100px 0;
-    background-color: var(--bg-secondary);
+    background: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
 }
 
@@ -276,7 +280,7 @@ nav {
 .team-card {
     text-align: center;
     padding: 30px 15px;
-    background-color: var(--bg-primary);
+    background-color: #ffffff;
     border-radius: 12px;
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
@@ -333,8 +337,8 @@ nav {
 /* Footer (Updated padding) */
 footer {
     padding: 80px 0 40px;
-    background-color: #0d170d;
-    /* Very dark green/black for footer */
+    background: var(--bg-secondary);
+    /* Gradient footer for consistency */
     border-top: 1px solid var(--border-color);
 }
 
@@ -380,7 +384,7 @@ footer {
 }
 
 .project-card {
-    background-color: var(--bg-secondary);
+    background: var(--bg-secondary);
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--border-color);
@@ -604,7 +608,7 @@ footer {
 }
 
 .story-box {
-    background-color: var(--bg-secondary);
+    background: var(--bg-secondary);
     padding: 60px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
@@ -641,7 +645,7 @@ footer {
 }
 
 .value-card {
-    background-color: var(--bg-secondary);
+    background: var(--bg-secondary);
     padding: 40px 30px;
     border-radius: 12px;
     border: 1px solid var(--border-color);
@@ -723,8 +727,8 @@ footer {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(13, 23, 13, 0.98);
-    /* Deep dark green */
+    background-color: rgba(255, 255, 255, 0.98);
+    /* White Overlay */
     z-index: 1500;
     display: flex;
     flex-direction: column;
