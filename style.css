@@ -340,8 +340,28 @@ nav {
     }
 
     .slider-btn {
-        display: none;
-        /* Hide buttons on mobile, rely on swipe */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(4px);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .prev-btn {
+        left: 0;
+    }
+
+    .next-btn {
+        right: 0;
     }
 }
 
