@@ -1243,3 +1243,9 @@ body {
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
 }
+
+/* Link Fixes */
+.service-card, .sector-card {
+    display: block; /* Ensure anchor tags behave like blocks */
+    cursor: pointer;
+}
