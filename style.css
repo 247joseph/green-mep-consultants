@@ -1078,3 +1078,168 @@ footer {
     --bg-light: #f8fcf8; /* Light greenish tint if not defined */
     --white: #ffffff;
 }
+
+/* --- New Sections: Sectors, Testimonials, Proposal --- */
+
+/* Premium Styling Enhancements */
+body {
+    background-color: #fcfcfc; /* Slightly softer white */
+}
+
+/* Sectors Section */
+.sectors {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.sectors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.sector-card {
+    background: var(--bg-light);
+    padding: 30px 20px;
+    border-radius: 8px; /* Sharper corners for engineering feel */
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.sector-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.sector-card:hover::after {
+    width: 100%;
+}
+
+.sector-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    background: white;
+}
+
+.sector-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+    opacity: 0.8;
+}
+
+.sector-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 100px 0;
+    background-color: var(--bg-secondary); /* Gradient background */
+    position: relative;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.testimonial-quote {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.testimonial-role {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Proposal CTA Section */
+.proposal-cta {
+    padding: 120px 0;
+    background-color: #1a1a1a; /* Dark premium background */
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.proposal-bg-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background: repeating-linear-gradient(
+        45deg,
+        #000,
+        #000 10px,
+        #222 10px,
+        #222 20px
+    );
+}
+
+.proposal-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.proposal-cta h2 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    color: white;
+    font-weight: 300;
+}
+
+.proposal-cta h2 span {
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+.proposal-cta p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 40px;
+}
+
+/* Floating Shapes Animation (Optional Polish) */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
